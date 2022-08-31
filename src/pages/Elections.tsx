@@ -12,21 +12,23 @@ const Elections = (props: Props) => {
   {"electionName": "Japan Elections", "date": "07/04/2022"},
   {"electionName": "Singapore Elections", "date": "10/04/2022"}]
   return (
-    <div className='bg-green-200'>
-      <div className='bg-yellow-200'>
+    <div className=''>
+      <div className=''>
       <p className='text-xl font-bold my-4'>Upcoming Elections:</p>
       {upcomingElections.map((item, idx) => {
+        const {electionName, date} = item
         return (
-          <Accordion />
+          <Accordion name={electionName} dates={date}/>
         )
       })
       }
       </div>
       <p className='text-xl font-bold my-4'>Other Elections:</p>
-      <div className='bg-pink-200'>
+      <div className=''>
       {otherElections.map((item, idx) => {
+        const {electionName, date} = item
         return (
-          <Accordion />
+          <Accordion name={electionName} dates={date}/>
         )
       })
       }

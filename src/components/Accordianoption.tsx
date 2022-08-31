@@ -18,11 +18,15 @@ import { PublicKey } from '@solana/web3.js';
 export interface NFTInterface {
 
     name: string;
-    dates: string;
+    age: string;
+    party: string;
+    education: string
+    selected: boolean;
+    
     // price: number;
   }
 
-export default function ControlledAccordions({name, dates }: NFTInterface) {
+export default function ControlledAccordions({name, age, party, education, selected }: NFTInterface) {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
@@ -42,8 +46,11 @@ export default function ControlledAccordions({name, dates }: NFTInterface) {
             Upstate Elections
           </Typography> */}
           <div className='flex flex-row justify-between w-full'>
-          <p className="font-bold text-xl text-blue-900">{name}</p>
-          <p className="font-bold text-xl text-blue-900">{dates}</p>
+            <div className={`rounded-full hover:${"bg-blue-500"} border-2 p-3 special`} onClick={(el) => {
+              console.log(el)
+            }}></div>
+          <p className="font-bold text-xl text-blue-900 ">{name}</p>
+          <p className="font-bold text-xl text-blue-900">{age}</p>
           </div>
          
           {/* <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography> */}

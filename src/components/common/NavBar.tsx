@@ -6,6 +6,11 @@ import { Link, useLocation } from 'react-router-dom';
 const NavBar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const location = useLocation();
+    // /elections, /elections, /mint, /vote
+    const links = [{"title": "Personal Info", "link": "/elections"},
+    {"title": "Elections", "link": "/elections"},
+    {"title": "Contact", "link": "/mint"},
+    {"title": "Vote", "link": "/vote"}]
 
     return (
         <nav className="bg-slate-900 border-b border-slate-800 fixed z-30 w-full">
@@ -81,22 +86,14 @@ const NavBar = () => {
                         </a> */}
 
                         <div className=' flex flex-row justify-between'>
-                        
-                        <a href="/elections" className="text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
-                           Personal Info
-                        </a>
 
-                        <a href="/elections" className="text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
-                           Elections
-                        </a>
+                            {links.map((item, idx) => {
+                                const { title, link} = item
+                                return (<a href={link} className=" text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
+                                    {title}</a>)
+                            })}
 
-                        <a href="/mint" className="text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
-                           Contact
-                        </a>
 
-                        <a href="/mint2" className="text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
-                           Vote
-                        </a>
                         </div>
                         <button
                             id="toggleSidebarMobile"

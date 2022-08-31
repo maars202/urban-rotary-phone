@@ -14,6 +14,7 @@ import Mainpage from './pages/Mainpage';
 import Mintnftpage from './pages/Mintnftpage';
 import Mintnftpage2 from './pages/Mintnftpage2';
 import Elections from './pages/Elections';
+import Votingpage from './pages/Votingpage';
 import Todo from './pages/Todo';
 
 export const App: FC = () => {
@@ -31,6 +32,8 @@ export const App: FC = () => {
                             <Route path="/mint2" element={<Mintnftpage2 />} />
                             <Route path="/todos" element={<Todo />} />
                             <Route path="/elections" element={<Elections />} />
+                            <Route path="/vote" element={<Votingpage />} />
+                            
                         </Routes>
                     }
                 />

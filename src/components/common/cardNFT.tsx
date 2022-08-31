@@ -16,7 +16,6 @@ export interface NFTInterface {
     // price: number;
 }
 
-
 interface cardNFTInterface {
     nft: NFTInterface;
     wallet: AnchorWallet | undefined;
