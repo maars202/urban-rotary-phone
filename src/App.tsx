@@ -26,7 +26,7 @@ export const App: FC = () => {
                 <Main
                     childComp={
                         <Routes>
-                            <Route path="/" element={<Mainpage />} />
+                            <Route path="/" element={<Elections />} />
                             <Route path="/mint" element={<Mintnftpage />} />
                             <Route path="/mint2" element={<Mintnftpage2 />} />
                             <Route path="/todos" element={<Todo />} />
