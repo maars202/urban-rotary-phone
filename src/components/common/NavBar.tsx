@@ -90,11 +90,11 @@ const NavBar = () => {
                            Elections
                         </a>
 
-                        <a href="/elections" className="text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
+                        <a href="/mint" className="text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
                            Contact
                         </a>
 
-                        <a href="/elections" className="text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
+                        <a href="/mint2" className="text-xl font-bold flex items-center lg:ml-2.5 hover:underline hover:scale-110 underline-offset-4 decoration-sky-500 text-white">
                            Vote
                         </a>
                         </div>
